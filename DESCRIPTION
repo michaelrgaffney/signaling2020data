@@ -1,16 +1,17 @@
 Package: signaling2020data
-Title: What the Package Does (One Line, Title Case)
+Title: Cleaned 2020 Signaling Data 
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Michael",
+           family = "Gaffney",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "michael.gaffney2@wsu.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+Description: This package contains cleaned data for both the US and Indian Samples of our 2020 vignette study.
+License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)
