@@ -3,7 +3,7 @@
 #' @format A data frame with 1950 rows and 61 variables:
 #' \describe{
 #'   \item{\code{MTurk ID}}{character The MTruk ID submitted by the participants. Can be used to identify particpants who completed the study.}
-#'   \item{\code{IPAddress}}{character IP Address collected by Qualtrics.
+#'   \item{\code{IPAddress}}{character IP Address collected by Qualtrics.}
 #'   \item{\code{Progress}}{double Qualtrics created variable that reflects progress in the survey. Not relaible for determing how far participants made it through the study since both being filtered out due to attention check failure and full completion are scored as 100. To determine who finished the survey, use MTurk ID.}
 #'   \item{\code{sample}}{character Whether the participant was recruited through the Indian or US sample on MTurk.}
 #'   \item{\code{vignette}}{character Which vignette participants read.}

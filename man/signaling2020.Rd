@@ -7,67 +7,68 @@
 \format{
 A data frame with 1950 rows and 61 variables:
 \describe{
-\item{\code{MTurk ID}}{character COLUMN_DESCRIPTION}
-\item{\code{IPAddress}}{character COLUMN_DESCRIPTION}
-\item{\code{Progress}}{double COLUMN_DESCRIPTION}
-\item{\code{sample}}{character COLUMN_DESCRIPTION}
-\item{\code{vignette}}{character COLUMN_DESCRIPTION}
-\item{\code{signal}}{character COLUMN_DESCRIPTION}
-\item{\code{T1Belief}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Action}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Divide}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Belief}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Action}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Divide}}{double COLUMN_DESCRIPTION}
-\item{\code{T3Action}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Angry}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Sad}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Suicidal}}{double COLUMN_DESCRIPTION}
-\item{\code{T1MentallyIll}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Depressed}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Guilty}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Calm}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Neutral}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Scared}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Tired}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Distressed}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Devious}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Jealous}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Confident}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Traumatized}}{double COLUMN_DESCRIPTION}
-\item{\code{T1Violated}}{double COLUMN_DESCRIPTION}
-\item{\code{T1NoneOfAbove}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Angry}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Sad}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Suicidal}}{double COLUMN_DESCRIPTION}
-\item{\code{T2MentallyIll}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Depressed}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Guilty}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Calm}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Neutral}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Scared}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Tired}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Distressed}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Devious}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Jealous}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Confident}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Traumatized}}{double COLUMN_DESCRIPTION}
-\item{\code{T2Violated}}{double COLUMN_DESCRIPTION}
-\item{\code{T2NoneOfAbove}}{double COLUMN_DESCRIPTION}
-\item{\code{Age}}{double COLUMN_DESCRIPTION}
-\item{\code{Sex}}{character COLUMN_DESCRIPTION}
-\item{\code{Sons}}{double COLUMN_DESCRIPTION}
-\item{\code{Daughters}}{double COLUMN_DESCRIPTION}
-\item{\code{Rel Status}}{character COLUMN_DESCRIPTION}
-\item{\code{Ed}}{character COLUMN_DESCRIPTION}
-\item{\code{Income}}{character COLUMN_DESCRIPTION}
-\item{\code{Feedback}}{character COLUMN_DESCRIPTION}
-\item{\code{TotalTime}}{double COLUMN_DESCRIPTION}
-\item{\code{VignetteTime}}{double COLUMN_DESCRIPTION}
-\item{\code{SignalTime}}{double COLUMN_DESCRIPTION}
-\item{\code{T4AttentionCheck}}{double COLUMN_DESCRIPTION}
-\item{\code{T4AttentionCheckFail}}{double COLUMN_DESCRIPTION}
-\item{\code{CompleteSurvey}}{logical COLUMN_DESCRIPTION}
+\item{\code{MTurk ID}}{character The MTruk ID submitted by the participants. Can be used to identify particpants who completed the study.}
+\item{\code{IPAddress}}{character IP Address collected by Qualtrics.}
+\item{\code{Progress}}{double Qualtrics created variable that reflects progress in the survey. Not relaible for determing how far participants made it through the study since both being filtered out due to attention check failure and full completion are scored as 100. To determine who finished the survey, use MTurk ID.}
+\item{\code{sample}}{character Whether the participant was recruited through the Indian or US sample on MTurk.}
+\item{\code{vignette}}{character Which vignette participants read.}
+\item{\code{signal}}{character Which signal participants read as the treatment.}
+\item{\code{T1Belief}}{double How much partipants believed the signaler to be telling the truth pre-signal (0 = Not at all; 100 = Completely).}
+\item{\code{T1Action}}{double How likely participants would be to perform what is requested of them by the signaler pre-signal (0 = Very unlikely; 100 = Very likely).}
+\item{\code{T1Divide}}{double How participants in the Indian sample would divide the availible money between their two daugthers pre-signal (0 = Much more for the younger daughter; 50 = Even Split; Much more for the older daughter).}
+\item{\code{T2Belief}}{double How much partipants believed the signaler to be telling the truth post-signal (0 = Not at all; 100 = Completely).}
+\item{\code{T2Action}}{double How likely participants would be to perform what is requested of them by the signaler post-signal (0 = Very unlikely; 100 = Very likely).}
+\item{\code{T2Divide}}{double How participants in the Indian sample would divide the availible money between their two daugthers post-signal (0 = Much more for the younger daughter; 50 = Even Split; Much more for the older daughter).}
+\item{\code{T3Action}}{double How likely participants would be to perform what is requested of them by the signaler following strong video or directly observed evidence (0 = Not at all; 100 = Completely).}
+\item{\code{T1Angry}}{double If the participant thought the signaler was angry pre-signal (0 = no; 1 = yes).}
+\item{\code{T1Sad}}{double If the participant thought the signaler was sad pre-signal (0 = no; 1 = yes).}
+\item{\code{T1Suicidal}}{double If the participant thought the signaler was suicidal pre-signal (0 = no; 1 = yes).}
+\item{\code{T1MentallyIll}}{double If the participant thought the signaler was mentally ill pre-signal (0 = no; 1 = yes).}
+\item{\code{T1Depressed}}{double If the participant thought the signaler was depressed pre-signal (0 = no; 1 = yes).}
+\item{\code{T1Guilty}}{double If the participant thought the signaler was feeling guilty pre-signal (0 = no; 1 = yes).}
+\item{\code{T1Calm}}{double If the participant thought the signaler was calm pre-signal (0 = no; 1 = yes).}
+\item{\code{T1Neutral}}{double If the participant thought the signaler was feeling neutral pre-signal (0 = no; 1 = yes).}
+\item{\code{T1Scared}}{double If the participant thought the signaler was scared pre-signal (0 = no; 1 = yes).}
+\item{\code{T1Tired}}{double If the participant thought the signaler was tried pre-signal (0 = no; 1 = yes).}
+\item{\code{T1Distressed}}{double If the participant thought the signaler was distressed pre-signal (0 = no; 1 = yes).}
+\item{\code{T1Devious}}{double If the participant thought the signaler was feeling devious pre-signal (0 = no; 1 = yes).}
+\item{\code{T1Jealous}}{double If the participant thought the signaler was jealous pre-signal (0 = no; 1 = yes).}
+\item{\code{T1Confident}}{double If the participant thought the signaler was feeling confident pre-signal (0 = no; 1 = yes).}
+\item{\code{T1Traumatized}}{double If the participant thought the signaler was feeling traumatized pre-signal (0 = no; 1 = yes).}
+\item{\code{T1Violated}}{double If the participant thought the signaler was feeling violated pre-signal (0 = no; 1 = yes).}
+\item{\code{T1NoneOfAbove}}{double If the participant thought the signaler was not feeling any of the previously mentioned states pre-signal (0 = no; 1 = yes).}
+\item{\code{T2Angry}}{double If the participant thought the signaler was angry post-signal (0 = no; 1 = yes).}
+\item{\code{T2Sad}}{double If the participant thought the signaler was sad post-signal (0 = no; 1 = yes).}
+\item{\code{T2Suicidal}}{double If the participant thought the signaler was suicidal post-signal (0 = no; 1 = yes).}
+\item{\code{T2MentallyIll}}{double If the participant thought the signaler was mentally ill post-signal (0 = no; 1 = yes).}
+\item{\code{T2Depressed}}{double If the participant thought the signaler was depressed post-signal (0 = no; 1 = yes).}
+\item{\code{T2Guilty}}{double If the participant thought the signaler was feeling guilty post-signal (0 = no; 1 = yes).}
+\item{\code{T2Calm}}{double If the participant thought the signaler was calm post-signal (0 = no; 1 = yes).}
+\item{\code{T2Neutral}}{double If the participant thought the signaler was feeling neutral post-signal (0 = no; 1 = yes).}
+\item{\code{T2Scared}}{double If the participant thought the signaler was scared post-signal (0 = no; 1 = yes).}
+\item{\code{T2Tired}}{double If the participant thought the signaler was tired post-signal (0 = no; 1 = yes).}
+\item{\code{T2Distressed}}{double If the participant thought the signaler was distressed post-signal (0 = no; 1 = yes).}
+\item{\code{T2Devious}}{double If the participant thought the signaler was feeling devious post-signal (0 = no; 1 = yes).}
+\item{\code{T2Jealous}}{double If the participant thought the signaler was jealous post-signal (0 = no; 1 = yes).}
+\item{\code{T2Confident}}{double If the participant thought the signaler was feeling confident post-signal (0 = no; 1 = yes).}
+\item{\code{T2Traumatized}}{double If the participant thought the signaler was feeling traumatized post-signal (0 = no; 1 = yes).}
+\item{\code{T2Violated}}{double If the participant thought the signaler was feeling violated post-signal (0 = no; 1 = yes).}
+\item{\code{T2NoneOfAbove}}{double If the participant thought the signaler was not feeling any of the previously mentioned states post-signal (0 = no; 1 = yes).}
+\item{\code{Age}}{double Self reported age of the participant.}
+\item{\code{Sex}}{character Self reported sex of the participant.}
+\item{\code{Sons}}{double Self reported number of sons the participant has.}
+\item{\code{Daughters}}{double Self reported number of daughters the participant has.}
+\item{\code{Rel Status}}{character Self reported relationship status of the participant.}
+\item{\code{Ed}}{character Self reported level of education of the participant.}
+\item{\code{Income}}{character Self reported income of the participant (Indian sample = in rupees; US sample = in USD).}
+\item{\code{CurrencyType}}{character Rupees or USD.}
+\item{\code{Feedback}}{character Responses to an open-ended, optional feedback prompt.}
+\item{\code{TotalTime}}{double Time spent on the survey.}
+\item{\code{VignetteTime}}{double Time spent reading the main body of the vignette (pre-signal).}
+\item{\code{SignalTime}}{double Time spent reading the signal treatment.}
+\item{\code{T4AttentionCheck}}{double Attention check in which the participant was asked to drag the slider all the way to the left (0 is the desired value).}
+\item{\code{T4AttentionCheckFail}}{double If the participant dragged the slider to a value other than 0 (0 = no; 1 = yes).}
+\item{\code{CompleteSurvey}}{logical If the participant completed the survey (0 = no; 1 = yes.)}
 }
 }
 \usage{

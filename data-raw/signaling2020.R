@@ -232,7 +232,7 @@ US <- select(`MTurk ID`, IPAddress, Progress, sample, vignette, signal, T1Belief
              T1Jealous, T1Confident, T1Traumatized, T1Violated, T1NoneOfAbove, T2Angry, T2Sad,
              T2Suicidal, T2MentallyIll,T2Depressed, T2Guilty, T2Calm, T2Neutral, T2Scared, T2Tired,
              T2Distressed, T2Devious,T2Jealous, T2Confident, T2Traumatized, T2Violated,
-             T2NoneOfAbove, Age, Sex, Sons, Daughters, `Rel Status`, Ed, Income, Feedback,
+             T2NoneOfAbove, Age, Sex, Sons, Daughters, `Rel Status`, Ed, Income, CurrencyType, Feedback,
              TotalTime, VignetteTime, SignalTime, T4AttentionCheck, T4AttentionCheckFail, .data = dUS)
 
 col_names2 <- names(read_csv("data-raw/2020IndianSampleRaw.csv", n_max = 0))
