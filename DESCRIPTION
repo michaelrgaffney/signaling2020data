@@ -6,7 +6,7 @@ Authors@R:
            family = "Gaffney",
            role = c("aut", "cre"),
            email = "michael.gaffney2@wsu.edu",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           comment = c(ORCID = "https://orcid.org/0000-0002-7552-6942"))
 Description: This package contains cleaned data for both the US and Indian Samples of our 2020 vignette study.
 License: CC BY 4.0
 Encoding: UTF-8

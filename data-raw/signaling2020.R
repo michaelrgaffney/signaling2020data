@@ -221,7 +221,8 @@ dUS <- read_csv("data-raw/2020USSampleRaw.csv", col_names = col_names, skip = 7)
   mutate( # NAs for vars only in Indian Sample
     T1Divide = NA_real_,
     T2Divide = NA_real_,
-    SignalTime = NA_real_
+    SignalTime = NA_real_,
+    CurrencyType = "USD"
   )
 
 
@@ -305,7 +306,8 @@ dIndia <- read_csv("data-raw/2020IndianSampleRaw.csv", col_names = col_names2, s
   mutate( #typo fix
     Daughters = Daugthers,
     `Rel Status` = RelStat,
-    `MTurk ID` = as.character(MTurkCode)
+    `MTurk ID` = as.character(MTurkCode),
+    CurrencyType = "Rupees"
   )
 
 India <- select(`MTurk ID`, IPAddress, Progress, sample, vignette, signal, T1Belief, T1Action, T1Divide,
@@ -314,7 +316,7 @@ India <- select(`MTurk ID`, IPAddress, Progress, sample, vignette, signal, T1Bel
              T1Jealous, T1Confident, T1Traumatized, T1Violated, T1NoneOfAbove, T2Angry, T2Sad,
              T2Suicidal, T2MentallyIll,T2Depressed, T2Guilty, T2Calm, T2Neutral, T2Scared, T2Tired,
              T2Distressed, T2Devious,T2Jealous, T2Confident, T2Traumatized, T2Violated,
-             T2NoneOfAbove, Age, Sex, Sons, Daughters, `Rel Status`, Ed, Income, Feedback,
+             T2NoneOfAbove, Age, Sex, Sons, Daughters, `Rel Status`, Ed, Income, CurrencyType, Feedback,
              TotalTime, VignetteTime, SignalTime, T4AttentionCheck, T4AttentionCheckFail, .data = dIndia)
 
 
