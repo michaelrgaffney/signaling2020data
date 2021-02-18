@@ -2,7 +2,7 @@
 #' @description This package contains cleaned data for both the US and Indian Samples of our 2020 vignette study.
 #' @format A data frame with 1950 rows and 61 variables:
 #' \describe{
-#'   \item{\code{MTurk ID}}{character The MTruk ID submitted by the participants. Can be used to identify particpants who completed the study.}
+#'   \item{\code{MTurkID}}{character The MTurk ID submitted by the participants. Can be used to identify particpants who completed the study.}
 #'   \item{\code{IPAddress}}{character IP Address collected by Qualtrics.}
 #'   \item{\code{Progress}}{double Qualtrics created variable that reflects progress in the survey. Not relaible for determing how far participants made it through the study since both being filtered out due to attention check failure and full completion are scored as 100. To determine who finished the survey, use MTurk ID.}
 #'   \item{\code{sample}}{character Whether the participant was recruited through the Indian or US sample on MTurk.}
@@ -53,7 +53,7 @@
 #'   \item{\code{Sex}}{character Self reported sex of the participant.}
 #'   \item{\code{Sons}}{double Self reported number of sons the participant has.}
 #'   \item{\code{Daughters}}{double Self reported number of daughters the participant has.}
-#'   \item{\code{Rel Status}}{character Self reported relationship status of the participant.}
+#'   \item{\code{RelStatus}}{character Self reported relationship status of the participant.}
 #'   \item{\code{Ed}}{character Self reported level of education of the participant.}
 #'   \item{\code{Income}}{character Self reported income of the participant (Indian sample = in rupees; US sample = in USD).}
 #'   \item{\code{CurrencyType}}{character Rupees or USD.}

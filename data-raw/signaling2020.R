@@ -320,9 +320,32 @@ India <- select(`MTurk ID`, IPAddress, Progress, sample, vignette, signal, T1Bel
              TotalTime, VignetteTime, SignalTime, T4AttentionCheck, T4AttentionCheckFail, .data = dIndia)
 
 
+signal_recode_dict <-
+  c(
+    'Crying' = 'Crying',
+    'CryingwithBehaviorChange' = 'Mild depression',
+    'Depression' = 'Depression',
+    'SuicideAttempt' = 'Suicide attempt',
+    'VerbalRequest' = 'Verbal request'
+  )
+
+vignette_recode_dict <-
+  c(
+    'Basketball' = 'Basketball coach',
+    'RomanticPartner' = 'Romantic partner',
+    'Sister' = 'Brother-in-law',
+    'ThwartedMarriage' = 'Thwarted marriage'
+  )
+
 signaling2020 <- bind_rows(US,India) %>%
+  rename(
+    MTurkID = `MTurk ID`,
+    RelStatus = `Rel Status`
+  ) %>%
   mutate(
-    CompleteSurvey = !is.na(`MTurk ID`)
+    CompleteSurvey = !is.na(MTurkID),
+    signal = signal_recode_dict[signal],
+    vignette = vignette_recode_dict[vignette]
   )
 
 
