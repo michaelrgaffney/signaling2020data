@@ -345,9 +345,20 @@ signaling2020 <- bind_rows(US,India) %>%
   mutate(
     CompleteSurvey = !is.na(MTurkID),
     signal = signal_recode_dict[signal],
-    vignette = vignette_recode_dict[vignette]
+    vignette = vignette_recode_dict[vignette],
+    Income = str_trim(str_replace_all(Income, ',|\\.|`|rupees', '')),
+    Income = case_when(
+      Income == '15 lakhs Rupees' ~ '1500000',
+      Income == '5 lakhs' ~ '500000',
+      Income == 'around $60000 to $70000 or so' ~ '65000',
+      Income == '32 lakha' ~ '3200000',
+      Income == 'About 10 lacs' ~ '1000000',
+      Income == 'n/a' ~ NA_character_,
+      TRUE ~ Income
+    ),
+    Income = as.numeric(Income),
+    Income = ifelse(CurrencyType == 'USD', Income, Income * 0.014) # Rupees to dollars Mar 2021
   )
-
 
 usethis::use_data(signaling2020, overwrite = TRUE)
 
