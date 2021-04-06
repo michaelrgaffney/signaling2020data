@@ -55,6 +55,7 @@
 #'   \item{\code{Daughters}}{double Self reported number of daughters the participant has.}
 #'   \item{\code{RelStatus}}{character Self reported relationship status of the participant.}
 #'   \item{\code{Ed}}{character Self reported level of education of the participant.}
+#'   \item{\code{years_education}}{double Years of education estimated from self-reported level of education.}
 #'   \item{\code{Income}}{character Self reported income of the participant (Indian sample = in rupees; US sample = in USD).}
 #'   \item{\code{CurrencyType}}{character Rupees or USD.}
 #'   \item{\code{Feedback}}{character Responses to an open-ended, optional feedback prompt.}

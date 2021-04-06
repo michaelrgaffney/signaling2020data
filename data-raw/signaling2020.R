@@ -360,5 +360,22 @@ signaling2020 <- bind_rows(US,India) %>%
     Income = ifelse(CurrencyType == 'USD', Income, Income * 0.014) # Rupees to dollars Mar 2021
   )
 
+
+# Years of education ------------------------------------------------------
+
+ed2years <-
+  c(
+    "Some high school (secondary school), no diploma" = 11,
+    "GED" = 13,
+    "High school (secondary school)" = 13,
+    "Associate degree" = 15,
+    "Bachelor's degree" = 17,
+    "Professional degree" = 19,
+    "Master's degree" = 19,
+    "Doctorate" = 24
+  )
+
+signaling2020$years_education <- ed2years[signaling2020$Ed]
+
 usethis::use_data(signaling2020, overwrite = TRUE)
 
